@@ -1,3 +1,5 @@
+Notice: Our use of Shlorp to generate multi-author, data-driven reports is now superseded by [Ckan-o-Sweave](https://bitbucket.org/dpaw/ckan-o-sweave), a template Sweave project integrating content from a CKAN data catalogue (figures, captions, text) and the project itself.
+
 ![shlorp](http://i.imgur.com/ujwCg.jpg) 
 
 [Picture credits](http://www.reddit.com/user/tehjeff)
