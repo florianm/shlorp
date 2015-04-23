@@ -1,0 +1,15 @@
+"""Settings template for module shlorp.
+
+Modify to your needs and save as settings.py
+
+Static variables:
+
+USERNAME - Username for authentication
+PASSWORD - Password for authentication
+SOURCES - a list of URLS to download as [url, filename]
+"""
+USERNAME="myusername"
+PASSWORD="mypassword"
+SOURCES = [
+    ['https://confluence.mydomain.com/display/XXX/my+page.html', 'test']
+]

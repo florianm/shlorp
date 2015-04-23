@@ -1,0 +1,24 @@
+# HTTP requests, download
+wget
+requests
+
+# HTML parsing
+splinter
+lxml
+html5lib
+
+# HTML manipulation
+beautifulsoup4
+unidecode
+pytidylib
+pypandoc==0.8.1
+
+# Developing
+IPython
+
+# Testing
+wercker
+
+# Documentation
+Sphinx
+

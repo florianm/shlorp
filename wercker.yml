@@ -1,0 +1,38 @@
+box: wercker/python
+
+# Build definition
+build:
+  steps:
+    - virtualenv:
+        name: setup virtual environment
+        install_wheel: false # Enable wheel to speed up builds (experimental)
+
+    - script: 
+        name: make default settings
+        code: cp shlorp/settings.template shlorp/settings.py
+
+    - script:
+        name: install system, python dependencies and create dirs
+        code: |
+            sudo apt-get update
+            sudo apt-get install -y fabric
+            fab setup
+
+    # pip requirements are already run in fab setup
+    - pip-install
+
+    - script:
+        name: echo python information
+        code: |
+          echo "python version $(python --version) running"
+          echo "pip version $(pip --version) running"
+
+    - script:
+        name: create developer documentation
+        code: fab makedoc
+
+    - script:
+        name: run tests
+        code: |
+            fab setup
+            fab test
